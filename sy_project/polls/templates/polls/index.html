@@ -1,0 +1,11 @@
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <!-- 위와같은 예제에는 하드코딩하지말고 다음과같이 해두자. 이래야 나중에 url을 변경하고싶을때 템플릿을 전부 변경할 필요 없이
+        해당 앱의 url파일의 경로만 변경해주면 전부 바뀐다.-->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
