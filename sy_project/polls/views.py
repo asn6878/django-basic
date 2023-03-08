@@ -15,4 +15,4 @@ def results(request, question_id):
     return HttpResponse(response % question_id)
 
 def vote(request, question_id):
-    return HttpResponse("You're now voting on question %s. hope you made a great choice." % question_id)
+    return HttpResponse("You're now voting on question %s. hope you made a great choice. I'm serious." % question_id)
